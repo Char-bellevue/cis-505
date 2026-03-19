@@ -1,6 +1,7 @@
 .DS_Store
 
 ## Eclipse IDE
+*.class
 bin/
 temp/
 .metadata
