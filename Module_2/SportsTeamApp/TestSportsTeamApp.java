@@ -19,7 +19,7 @@ import java.util.Scanner;
  * Team name and comma-separated player names from user.
  *
  * Output:
- * Displays number of players and player names for each team.
+ * Displays number of players and player names for each team in formatted summary.
  */
 public class TestSportsTeamApp {
 
@@ -42,53 +42,46 @@ public class TestSportsTeamApp {
 
         while (lContinueProgram) {
 
-            // Purpose: Prompt user for team name
-            System.out.print("  Enter team name: ");
+            // Prompt user for team name
+            System.out.print("Enter team name: ");
             String lTeamName = lScanner.nextLine();
 
-            // Purpose: Create Team object
+            // Create Team object
             Team lTeam = new Team(lTeamName);
 
-            // Purpose: Prompt user for player names
-            System.out.print("  Enter player names (comma-separated, no spaces): ");
+            // Prompt user for player names with hint
+            System.out.println("Enter player names ");
+            System.out.print("      hint: use commas for multiple players; no spaces : ");
             String lPlayerInput = lScanner.nextLine();
 
-            // Purpose: Split input into array
+            // Split input into array and add players
             String[] lPlayerArray = lPlayerInput.split(",");
-
-            // Purpose: Add players to team using loop
-            for (int lIndex = 0; lIndex < lPlayerArray.length; lIndex++) {
-                lTeam.addPlayer(lPlayerArray[lIndex]);
+            for (String player : lPlayerArray) {
+                lTeam.addPlayer(player);
             }
 
-            // Purpose: Display number of players
-            System.out.println("  Number of players in team " + lTeam.getPlayerCount());
+            // Display team summary
+            System.out.println("\n-- Team Summary --");
+            System.out.println("Number of players in team: " + lTeam.getPlayerCount());
 
-            // Purpose: Build player output string
             StringBuilder lPlayerOutput = new StringBuilder();
-
             String[] lPlayers = lTeam.getPlayers();
-
-            for (int lIndex = 0; lIndex < lTeam.getPlayerCount(); lIndex++) {
-                lPlayerOutput.append(lPlayers[lIndex]);
-
-                if (lIndex < lTeam.getPlayerCount() - 1) {
+            for (int i = 0; i < lTeam.getPlayerCount(); i++) {
+                lPlayerOutput.append(lPlayers[i]);
+                if (i < lTeam.getPlayerCount() - 1) {
                     lPlayerOutput.append(",");
                 }
             }
+            System.out.println("Players on team: " + lPlayerOutput.toString());
 
-            // Purpose: Display player list
-            System.out.println("  Players on team: " + lPlayerOutput.toString());
-
-            // Purpose: Ask user to continue
-            System.out.print("  Do you want to enter another team? (yes/no): ");
+            // Ask user to continue
+            System.out.print("Continue? (y/n): ");
             String lUserChoice = lScanner.nextLine();
-
-            if (!lUserChoice.equalsIgnoreCase("yes")) {
+            if (!lUserChoice.equalsIgnoreCase("y")) {
                 lContinueProgram = false;
             }
 
-            System.out.println();
+            System.out.println(); // Blank line for readability
         }
 
         lScanner.close();
