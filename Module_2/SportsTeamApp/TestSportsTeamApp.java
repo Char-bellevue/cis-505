@@ -37,21 +37,26 @@ public class TestSportsTeamApp {
 
         Scanner lScanner = new Scanner(System.in);
 
+        // Purpose: Display welcome message at program start
+        System.out.println("Welcome to the Sports Team App"+ "\n");
+        //System.out.println(); // Blank line after welcome
+
         // Purpose: Controls program continuation
         boolean lContinueProgram = true;
 
         while (lContinueProgram) {
 
-            // Prompt user for team name
-            System.out.print("Enter team name: ");
+             // Purpose: Prompt user to enter a team name
+            System.out.print("Enter a team name: ");
             String lTeamName = lScanner.nextLine();
 
             // Create Team object
             Team lTeam = new Team(lTeamName);
 
-            // Prompt user for player names with hint
-            System.out.println("Enter player names ");
-            System.out.print("      hint: use commas for multiple players; no spaces : ");
+            // Purpose: Prompt user for player names with hint
+            System.out.println("\nEnter the player names:");
+            System.out.print("  hint: use commas for multiple players; no spaces>: ");
+           // System.out.println(); // Blank line after player input
             String lPlayerInput = lScanner.nextLine();
 
             // Split input into array and add players
@@ -61,27 +66,26 @@ public class TestSportsTeamApp {
             }
 
             // Display team summary
-            System.out.println("\n-- Team Summary --");
+            System.out.println("\n--Team Summary--");
             System.out.println("Number of players in team: " + lTeam.getPlayerCount());
 
             StringBuilder lPlayerOutput = new StringBuilder();
             String[] lPlayers = lTeam.getPlayers();
-            for (int i = 0; i < lTeam.getPlayerCount(); i++) {
-                lPlayerOutput.append(lPlayers[i]);
-                if (i < lTeam.getPlayerCount() - 1) {
-                    lPlayerOutput.append(",");
-                }
+            for (int lPlayerIndex = 0; lPlayerIndex < lTeam.getPlayerCount(); lPlayerIndex++) {
+                lPlayerOutput.append(lPlayers[lPlayerIndex]).append(",");
             }
             System.out.println("Players on team: " + lPlayerOutput.toString());
 
-            // Ask user to continue
-            System.out.print("Continue? (y/n): ");
+            // Ask user to continue or exit the program
+            System.out.print("\nContinue? (y/n): ");
             String lUserChoice = lScanner.nextLine();
-            if (!lUserChoice.equalsIgnoreCase("y")) {
+            if (lUserChoice.equalsIgnoreCase("y")) {
+                System.out.println(); // Blank line before next team entry
+            } else {
                 lContinueProgram = false;
+                System.out.println("\n\nEnd of line...");
             }
 
-            System.out.println(); // Blank line for readability
         }
 
         lScanner.close();
