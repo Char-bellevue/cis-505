@@ -1,4 +1,4 @@
-package Module_3;
+package Module_3.CustomerAccountApp;
 
 /*
  * Natarajan, C. (2026). CustomerAccountApp [Java source code].
