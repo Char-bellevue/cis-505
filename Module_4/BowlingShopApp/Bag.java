@@ -1,8 +1,7 @@
 package Module_4.BowlingShopApp;
 
-/*
  /*
- * Natarajan, C. (2026). CustomerAccountApp [Java source code].
+ * Natarajan, C. (2026). BowlingShopApp [Java source code].
  * Reference:
  *     Liang, Y. D. (2019). Introduction to Java programming and data structures:
  *         Comprehensive version (12th ed.). Pearson.

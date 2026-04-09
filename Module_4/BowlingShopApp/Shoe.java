@@ -1,10 +1,7 @@
 package Module_4.BowlingShopApp;
 
 /*
- * Author: [Your Last Name], [Your First Name]
- * Course: [Course Name]
- * Date: 2026
- * Assignment: Assignment 4.2 - Bowling Shop Application
+ * Natarajan, C. (2026). BowlingShopApp [Java source code].
  * Reference:
  *     Liang, Y. D. (2019). Introduction to Java programming and data structures:
  *         Comprehensive version (12th ed.). Pearson.
