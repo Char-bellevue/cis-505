@@ -48,6 +48,6 @@ public class Shoe extends Product {
     @Override
     public String toString() {
         return super.toString() + "\n"
-             + "Size: " + size;
+             + "  Size: " + size;
     }
 }

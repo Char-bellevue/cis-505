@@ -22,11 +22,11 @@ public class TestBowlingShopApp {
      */
     public static void displayMenu() {
         System.out.println("MENU OPTIONS");
-        System.out.println("   1. <b> Bowling Balls");
-        System.out.println("   2. <a> Bowling Bags");
-        System.out.println("   3. <s> Bowling Shoes");
-        System.out.println("   4. <x> To exit");
-        System.out.print("\nPlease choose an option: ");
+        System.out.println("  1. <b> Bowling Balls");
+        System.out.println("  2. <a> Bowling Bags");
+        System.out.println("  3. <s> Bowling Shoes");
+        System.out.println("  4. <x> To exit");
+        System.out.print("\n  Please choose an option: ");
     }
 
     /**
@@ -41,7 +41,7 @@ public class TestBowlingShopApp {
         Scanner lScanner = new Scanner(System.in);
 
         // Display the welcome message to the user upon application startup.
-        System.out.println("Welcome to the Bowling Shop");
+        System.out.println("  Welcome to the Bowling Shop");
 
         // Declare a variable to hold the user's menu selection.
         String lUserChoice;
@@ -65,7 +65,7 @@ public class TestBowlingShopApp {
 
                 // Display the product listing header if the queue contains any products.
                 if (lProducts.size() > 0) {
-                    System.out.println("\n--Product Listing--");
+                    System.out.println("\n  --Product Listing--");
                 }
 
                 // Iterate through the queue and display each product using its toString method.
@@ -79,7 +79,7 @@ public class TestBowlingShopApp {
         } while (!lUserChoice.equalsIgnoreCase("x"));
 
         // Display the exit message when the user chooses to end the session.
-        System.out.println("\nEnd of line...");
+        System.out.println("\n  End of line...");
 
         // Close the scanner resource to prevent any resource leaks.
         lScanner.close();

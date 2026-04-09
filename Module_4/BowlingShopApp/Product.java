@@ -85,8 +85,8 @@ public class Product {
         // Build the formatted price string using printf-style formatting.
         String lFormattedPrice = String.format("$%,6.2f", price);
 
-        return "Product code: " + code + "\n"
-             + "Description: " + description + "\n"
-             + "Price: " + lFormattedPrice;
+        return "  Product code: " + code + "\n"
+             + "  Description: " + description + "\n"
+             + "  Price: " + lFormattedPrice;
     }
 }

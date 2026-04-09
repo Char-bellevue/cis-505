@@ -48,6 +48,6 @@ public class Ball extends Product {
     @Override
     public String toString() {
         return super.toString() + "\n"
-             + "Color: " + color;
+             + "  Color: " + color;
     }
 }
