@@ -21,11 +21,11 @@ public class TestBowlingShopApp {
      *          The menu lists all available product categories and the exit option.
      */
     public static void displayMenu() {
-        System.out.println("MENU OPTIONS");
-        System.out.println("  1. <b> Bowling Balls");
-        System.out.println("  2. <a> Bowling Bags");
-        System.out.println("  3. <s> Bowling Shoes");
-        System.out.println("  4. <x> To exit");
+        System.out.println("  MENU OPTIONS");
+        System.out.println("    1. <b> Bowling Balls");
+        System.out.println("    2. <a> Bowling Bags");
+        System.out.println("    3. <s> Bowling Shoes");
+        System.out.println("    4. <x> To exit");
         System.out.print("\n  Please choose an option: ");
     }
 
