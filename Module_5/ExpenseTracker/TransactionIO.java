@@ -1,4 +1,4 @@
-package Module_5.ExpenseTracker
+package Module_5.ExpenseTracker;
 
 /*
  * Natarajan, C. (2026). ValidatorIO [Java source code].
