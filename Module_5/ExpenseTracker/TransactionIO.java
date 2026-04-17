@@ -1,7 +1,7 @@
 package Module_5.ExpenseTracker;
 
 /*
- * Natarajan, C. (2026). ValidatorIO [Java source code].
+ * Natarajan, C. (2026). TransactionIO [Java source code].
  * Reference:
  *     Liang, Y. D. (2019). Introduction to Java programming and data structures:
  *         Comprehensive version (12th ed.). Pearson.

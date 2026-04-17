@@ -1,7 +1,7 @@
 package Module_5.ExpenseTracker;
 
 /*
- * Natarajan, C. (2026). ValidatorIO [Java source code].
+ * Natarajan, C. (2026). TestExpenseTracker [Java source code].
  * Reference:
  *     Liang, Y. D. (2019). Introduction to Java programming and data structures:
  *         Comprehensive version (12th ed.). Pearson.
@@ -142,9 +142,6 @@ public class TestExpenseTracker {
                     System.out.println("\n  Exception: " + lException.getMessage() + "\n");
                 }
 
-            } else {
-                // The user entered a number outside the valid range.
-                System.out.println("\n  Error! Please choose option 1, 2, or 3.\n");
             }
 
             // Ask whether the user wants to return to the main menu or exit.

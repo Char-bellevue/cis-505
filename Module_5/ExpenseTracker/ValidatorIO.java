@@ -27,9 +27,9 @@ public class ValidatorIO {
      *            prompt — the message displayed to the user before each attempt.
      * Output   : The validated integer value entered by the user.
      */
-    public static int getInt(Scanner sc, String prompt) {
+    public static Integer getInt(Scanner sc, String prompt) {
         // Local variable to store the validated integer; starts at a safe default.
-        int lInput = 0;
+        Integer lInput = 0;
 
         // Flag that controls the validation loop; remains false until valid input.
         boolean lIsValid = false;

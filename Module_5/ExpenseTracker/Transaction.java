@@ -1,6 +1,6 @@
 package Module_5.ExpenseTracker;
 
- /*
+/*
  * Natarajan, C. (2026). Transaction [Java source code].
  * Reference:
  *     Liang, Y. D. (2019). Introduction to Java programming and data structures:
@@ -63,8 +63,9 @@ public class Transaction {
     }
 
     /**
-     * Convenience constructor that uses today's date automatically.
-     * Purpose  : Builds a transaction when the user does not supply a date.
+     * Convenience constructor that creates a transaction using today's date.
+     * Purpose  : Builds a transaction with description and amount when the
+     *            user does not supply a date; today's date is set automatically.
      * Input    : lDescription — a short description of the transaction.
      *            lAmount      — the monetary amount of the transaction.
      * Output   : A Transaction object whose date is set to today's date.
