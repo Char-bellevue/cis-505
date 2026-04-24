@@ -78,7 +78,7 @@ public class TestComposerApp {
         System.out.print("\n  Enter composer id: ");
         int lId = Integer.parseInt(pScanner.nextLine());
 
-        Composer lComposer = gComposerDao.findBy(lId);
+        Composer lComposer = gComposerDao.findById(lId);
 
         if (lComposer != null) {
             System.out.println("\n  " + lComposer);

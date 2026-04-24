@@ -30,7 +30,7 @@ public class MemComposerDao implements IComposerDao {
     }
 
     @Override
-    public Composer findBy(Integer pId) {
+    public Composer findById(Integer pId) {
 
         for (Composer lComposer : gComposers) {
             if (lComposer.getId() == pId) {
@@ -42,7 +42,29 @@ public class MemComposerDao implements IComposerDao {
     }
 
     @Override
-    public void insert(Composer pComposer) {
+    public boolean insert(Composer pComposer) {
         gComposers.add(pComposer);
+        return true;
+    }
+
+    @Override
+    public boolean update(Composer pComposer) {
+        Composer lExisting = findById(pComposer.getId());
+        if (lExisting != null) {
+            lExisting.setName(pComposer.getName());
+            lExisting.setGenre(pComposer.getGenre());
+            return true;
+        }
+        return false;
+    }
+
+    @Override
+    public boolean delete(Integer pId) {
+        Composer lComposer = findById(pId);
+        if (lComposer != null) {
+            gComposers.remove(lComposer);
+            return true;
+        }
+        return false;
     }
 }

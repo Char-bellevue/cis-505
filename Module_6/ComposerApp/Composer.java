@@ -90,4 +90,22 @@ public class Composer {
      * Purpose: Sets composer genre.
      * Input: String genre.
      * Output: None.
+     */
+    public void setGenre(String pGenre) {
+        this.gGenre = pGenre;
+    }
+
+    /**
+     * Purpose: Returns formatted string representation.
+     * Input: None.
+     * Output: Formatted string.
+     */
+    @Override
+    public String toString() {
+        return "Composer{" +
+                "id=" + gId +
+                ", name='" + gName + '\'' +
+                ", genre='" + gGenre + '\'' +
+                '}';
+    }
 }
