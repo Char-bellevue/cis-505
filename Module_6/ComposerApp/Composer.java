@@ -7,7 +7,6 @@ package Module_6.ComposerApp;
  *         Comprehensive version (12th ed.). Pearson.
  */
 
-
 /**
  * Purpose: This class represents a composer object.
  * Input: Composer id, name, and genre values.
@@ -96,16 +95,14 @@ public class Composer {
     }
 
     /**
-     * Purpose: Returns formatted string representation.
+     * Purpose: Returns formatted string representation with each field on a separate line.
      * Input: None.
-     * Output: Formatted string.
+     * Output: Formatted multi-line string.
      */
     @Override
     public String toString() {
-        return "Composer{" +
-                "id=" + gId +
-                ", name='" + gName + '\'' +
-                ", genre='" + gGenre + '\'' +
-                '}';
+        return "Id: " + gId + "\n" +
+               "Name: " + gName + "\n" +
+               "Genre: " + gGenre;
     }
 }
