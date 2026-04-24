@@ -69,7 +69,7 @@ public class TestComposerApp {
                 insertComposer(lScanner);
             }
             else if (lMenuChoice == 4) {
-                System.out.println("\n  Goodbye.");
+                // Exit the application loop.
             }
         }
 
