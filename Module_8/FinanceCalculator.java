@@ -12,7 +12,7 @@ package Module_8;
 public class FinanceCalculator {
 
     // Purpose: Stores the number of months in a year as a constant.
-    private static int MONTHS_IN_YEAR = 12;
+    private static final int MONTHS_IN_YEAR = 12;
 
     // Purpose:  Calculates the future value of an investment based on monthly
     //           payment, interest rate, and number of years.
@@ -20,7 +20,7 @@ public class FinanceCalculator {
     //           rate - the annual interest rate as a double.
     //           years - the number of years as an int.
     // Output:   Returns the calculated future value as a double.
-    static double calculateFutureValue(double monthlyPayment, double rate, int years) {
+    public static double calculateFutureValue(double monthlyPayment, double rate, int years) {
 
         // Purpose: Calculates the total number of months by multiplying years by months in a year.
         int lMonths = years * MONTHS_IN_YEAR;
